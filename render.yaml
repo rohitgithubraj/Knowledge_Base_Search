@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: knowledge-base-search
+    env: python
+    buildCommand: ""
+    startCommand: "python app.py"
