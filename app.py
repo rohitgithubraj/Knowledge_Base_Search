@@ -1,17 +1,11 @@
-from flask import Flask, request, jsonify, send_from_directory
+from flask import Flask, request, jsonify, render_template
 import sqlite3
-import os
 
 app = Flask(__name__)
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 @app.route("/")
-def serve_index():
-    return send_from_directory(BASE_DIR, "index.html")
-
-@app.route("/<path:path>")
-def static_files(path):
-    return send_from_directory(BASE_DIR, path)
+def home():
+    return render_template("index.html")
 
 @app.route("/search")
 def search():
