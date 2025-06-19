@@ -1,6 +1,9 @@
 services:
   - type: web
-    name: knowledge-base-search
+    name: flask-app
     env: python
     buildCommand: ""
     startCommand: "python app.py"
+    envVars:
+      - key: FLASK_ENV
+        value: production
