@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Knowledge Base Search</title>
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
   <h1>Knowledge Base Search</h1>
   <input type="text" id="searchBox" placeholder="Search..." onkeyup="search()">
   <ul id="results"></ul>
 
-  <script src="script.js"></script>
+ <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
+
+
